@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script src="json-to-go.js" type="text/javascript" defer></script>
+	<title>JSON to Go Struct{}</title>
+</head>
+
+<body>
+	<div class="intro">
+		<div class="title">
+			<h1>JSON to Go Struct{}</h1>
+			<h3>Convert JSON to Go Struct</h3>
+		</div>
+	</div><hr><br>
+	<div class="btn-convert">
+		<button type="submit" title="Convert">Convert</button>
+	</div>
+	<div class="container">
+		<div class="container-child json-container">
+			<textarea name="json" id="json-textarea" placeholder="Put JSON here"></textarea>
+		</div>
+		<div class="container-middle">
+			<div><label><input type="checkbox" title="Inline type definitions" checked>Inline type definitions</label></div>
+			<div><label><input type="checkbox" title="omitempty" id="">omitempty</label></div>
+			<div><button type="button" title="Copy to clipboard" class="btn-copy" disabled>Copy to clipboard</button></div>
+		</div>
+		<div class="container-child go-struct-container">
+			<textarea name="go-struct" id="go-struct-textarea" placeholder="Go Struct" disabled></textarea>
+		</div>
+	</div>
+</body>
+
+</html>
