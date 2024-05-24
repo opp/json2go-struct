@@ -438,9 +438,18 @@ function jsonToGo(json, typename, flatten = true, allOmitempty = true)
 		return keys
 	}
 }
+/*
+	-= END =-
 
-const goStructTextArea = document.querySelector('#go-struct-textarea');
+	JSON-to-Go
+	by Matt Holt
+*/
+
+const jsonTextArea = document.querySelector("#json-textarea");
+const goStructTextArea = document.querySelector("#go-struct-textarea");
 const copyButton = document.querySelector(".btn-copy");
+const convertButton = document.querySelector("#btn-convert");
+const structNameInput = document.querySelector("#struct-name");
 
 const convertJSON = (input, structName, inlineDefinitions, omitEmpty) => {
 	const convertedOutput = jsonToGo(input, structName, inlineDefinitions, omitEmpty).go;
@@ -457,3 +466,17 @@ const copyToClip = () => {
 	const convertedStruct = goStructTextArea.value;
 	navigator.clipboard.writeText(convertedStruct);
 };
+
+jsonTextArea.addEventListener("keypress", (e) => {
+  if (e.ctrlKey && e.key == "Enter") {
+    e.preventDefault();
+    convertButton.click();
+  };
+});
+
+structNameInput.addEventListener("keypress", (e) => {
+  if (e.key == "Enter") {
+    e.preventDefault();
+    convertButton.click();
+  };
+});
