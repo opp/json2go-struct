@@ -17,20 +17,20 @@
 		</div>
 	</div><hr><br>
 	<div class="btn-convert">
-		<button type="submit" title="Convert" onclick="convertJSON(document.querySelector('#json-textarea').value, document.querySelector('#struct-name').value, document.querySelector('#inline-def').checked, document.querySelector('#omitempty').checked);">Convert</button>
+		<button type="submit" title="Convert" id="btn-convert" onclick="convertJSON(document.querySelector('#json-textarea').value, document.querySelector('#struct-name').value, document.querySelector('#inline-def').checked, document.querySelector('#omitempty').checked);">Convert</button>
 	</div>
 	<div class="container">
 		<div class="container-child json-container">
-			<textarea name="json" id="json-textarea" placeholder="Put JSON here"></textarea>
+			<textarea name="json" title="Put JSON here" id="json-textarea" placeholder="Put JSON here" autofocus></textarea>
 		</div>
 		<div class="container-middle">
 			<div><label><input type="checkbox" id="inline-def" title="Inline type definitions" checked>Inline type definitions</label></div>
 			<div><label><input type="checkbox" id="omitempty" title="omitempty" checked>omitempty</label></div>
-			<div><label><input type="text" id="struct-name" title="Struct name [default: JSON2Go-Struct]" placeholder="Struct name [default: JSON2Go-Struct]"></label></div>
+			<div><label><input type="text" id="struct-name" title="Custom struct name [default: JSON2Go-Struct]" placeholder="Custom struct name"></label></div>
 			<div><button type="button" title="Copy to clipboard" class="btn-copy" disabled onclick="copyToClip();">Copy to clipboard</button></div>
 		</div>
 		<div class="container-child go-struct-container">
-			<textarea name="go-struct" id="go-struct-textarea" placeholder="Go Struct" disabled></textarea>
+			<textarea name="go-struct" title="Converted Go Struct" id="go-struct-textarea" placeholder="Go Struct" disabled></textarea>
 		</div>
 	</div>
 </body>

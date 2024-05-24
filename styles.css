@@ -57,6 +57,11 @@ textarea {
 	font-size: 12pt;
 }
 
+#struct-name {
+	box-sizing: border-box;
+	width: 100%;
+}
+
 @media (max-width: 800px) {
 	.intro {
 		flex-direction: column;
@@ -69,21 +74,13 @@ textarea {
 
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: #232323;
-		color: #ccc;
+		background-color: #222;
+		color: #ddd;
 	}
 
 	textarea {
-		background-color: #232323;
-		color: #ccc;
-		border: 1px solid #424242;
-	}
-
-	button {
-		background-color: #ccc;
-	}
-
-	input {
-		background-color: #ccc;
+		background-color: #222;
+		color: #ddd;
+		border: 1px solid #444;
 	}
 }
